@@ -9,6 +9,10 @@ namespace SimpleBotCore.Logic
     {
         public string Reply(SimpleMessage message)
         {
+            BotDAO botDAO = new BotDAO();
+
+            botDAO.connection(message);
+
             return $"{message.User} disse '{message.Text}'";
         }
 
